@@ -110,7 +110,7 @@ Global Model
   - doesn't mean that the regional model is immune to this
   - dues to service failures, not underlyting hardware issues
 
-#### Physical Infrasture
+#### Physical Infrastructure
 
 - vCPU
 - Physical Server
@@ -133,3 +133,96 @@ Global Model
   - Network edges and CDN locations
   - connects to the public network
 - Global System
+
+##### Global Network
+
+Multi-Regions
+
+1. Europe
+2. Asia
+3. North America
+
+Regions only
+
+- numbers in push pin show number of zones in a region
+
+1. Australia
+2. South America
+
+#### Network Ingress & Egress
+
+Normal network
+
+- Routes via Internet to edge location closest to destination
+
+Google: Routes so traffic enters from Internet at edge closest to source
+
+- Single global IP address can load balance worldwide
+  - hit servers closest to them physically
+  - if loaded, it will be routed to next closer one
+- Sidesteps many DNS issues
+- can now opt for "normal" network routing to reduce price and functionality
+
+#### Pricing
+
+1. Provisioned
+2. Usage - pay as you use
+3. Network Traffic
+    - Ingress - free
+    - Egress by GB - paid
+    - Egress to GCP services sometimes free
+        - don't pay within region unless live in a particular zone
+        - depends on destination service
+        - depends on location of that service
+
+#### Security
+
+**Distrust the network**
+
+- <https://cloud.google.com/security/security-design/>
+- Separation of duties and physical security
+- Absolutely everything always encrypted at rest
+- Strong key and identity management
+- Network encryption
+  - All control info within GCP services are encrypted
+  - All WAN traffic to be enccrypted automatically
+  - Moving towards encrypting all local traffic within data centers
+- BeyondCorp
+  - Security Model
+  - access control from network perimeter to individual devices and user
+  - Best security practice: Defense in depth, layers of security
+
+#### Scale and Automation
+
+**Automate all the things**
+
+- Scalability must be unbounded
+- Devs don't want to be answer pages
+- One of the Principle of Site Reliability Engineering
+  - Engineer the reliability in the system
+  - Automate the things tto respond appropriately
+
+
+#### Resource Quotas (Soft Limits)
+
+- Scope
+  - Regional
+  - Global
+- Change due to valid business reasons
+  - Can be automatic
+  - Can be requested
+    - response in 24-48 hours
+    - may be refused
+- Queryable
+
+``` cli
+gcloud compute project-info describe --project myprojectid
+```
+
+#### Organization
+
+Project
+- similar to AWS accounts
+- has its own resources
+  - resourcecs can be shared with other projects
+- can be grouped and controlled in a hierarchy
