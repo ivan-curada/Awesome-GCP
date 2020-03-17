@@ -24,18 +24,21 @@ What's the right cloud for you?
 Google is all about Big Data; huge scale.
 
 Published many white papers
-    - MapReduce
-    - Google File System
-    - Colossus
+
+- MapReduce
+- Google File System
+- Colossus
 
 Released opern source
-    - Kubernetes (from Borg project)
+
+- Kubernetes (from Borg project)
 
 Commercialized some things in GCP
-    - BigTable
-    - Spanner
-    - GCS (built on Collosus)
-    - BigQuery (from Dremel)
+
+- BigTable
+- Spanner
+- GCS (built on Collosus)
+ - BigQuery (from Dremel)
 
 Focus on innovation.
 Differentiates from AWS (focused on automating heavy lifting)
@@ -43,31 +46,39 @@ Differentiates from AWS (focused on automating heavy lifting)
 ### Google Organization
 
 Google hires Site Reliability Engineers (SREs), not Operations people
-`Site Reliability Engineering - How Google Runs Production Systems (O'Reilly Book)`
 
-GCP was built from dev towards ops/infra
-AWS was built from ops/infra towards dev
+``` markdown
+Site Reliability Engineering - How Google Runs Production Systems (O'Reilly Book)
+```
 
-Lynn Langit
-`Google is such a developer-focused cloud... Whereas AWS is a DevOps cloud....`
+GCP was built from dev towards ops/infra.
+
+AWS was built from ops/infra towards dev.
+
+``` markdown
+Google is such a developer-focused cloud... Whereas AWS is a DevOps cloud.... - Lynn Langit
+```
 
 Google expects people to have a developer background.
 
 ### History of GCP
 
 Grew some services internally
-    - Built by Googlers for Google
-    - Not originally for Enterprise
+
+- Built by Googlers for Google
+- Not originally for Enterprise
 
 Purchased some services
-    - Firbase, StackDriver, Apogee
-    - Leaks in abstraction more evident
-    - logging into a different console
+
+- Firbase, StackDriver, Apogee
+- Leaks in abstraction more evident
+- logging into a different console
 
 Catch-up to AWS
-    - Some functionality missing
-    - Avoided some mistakes in technical debt
-    - As an underdog, GCP is more willing to be "a cloud" that you use, not just "the cloud" that you use
+
+- Some functionality missing
+- Avoided some mistakes in technical debt
+- As an underdog, GCP is more willing to be "a cloud" that you use, not just "the cloud" that you use
 
 ## GCP Structure & Design
 
@@ -81,34 +92,44 @@ Catch-up to AWS
 #### Global System
 
 GCP is intrinsically global
-    - servicese are built for world-wide customer
-    - good user experience, not with scalability
+
+- services are built for world-wide customer
+- good user experience, not with scalability
 
 AWS is intrinsically region-scoped
 
 Regional Model
-    - simplifies data sovereignty
-    - know where data is physically
+
+- simplifies data sovereignty
+- know where data is physically
 
 Global Model
-    - easier to handle latency and failures in a global way
-    - could be more sensitive to multi-region/global failure modes
-        - doesn't mean that the regional model is immune to this
-        - dues to service failures, not underlyting hardware issues
+
+- easier to handle latency and failures in a global way
+- could be more sensitive to multi-region/global failure modes
+  - doesn't mean that the regional model is immune to this
+  - dues to service failures, not underlyting hardware issues
 
 #### Physical Infrasture
 
-vCPU
-Physical Server
-Rack
-Data Center (building)
-    - actual building
-    - clear separation of duties for workers
-    - Virtual tour of GCP data center
-Zone
-    - on or more data centers logically grouped together
-    - each zone is designed independently to other zones
-Region
-    - zones are grouped into a region
-    - zones within can communicate to each other quickly
-Mu
+- vCPU
+- Physical Server
+- Rack
+- Data Center (building)
+  - actual building
+  - clear separation of duties for workers
+  - Virtual tour of GCP data center
+- Zone
+  - on or more data centers logically grouped together
+  - each zone is designed independently to other zones
+- Region
+  - zones are grouped into a region
+  - zones within can communicate to each other quickly
+- Multi-Region
+  - Each region in a multi-region is at least a 100 miles away from each other
+- Private Global Network
+  - traffic from one server to another remains in the private network
+- Points of Presence (PoP)
+  - Network edges and CDN locations
+  - connects to the public network
+- Global System
