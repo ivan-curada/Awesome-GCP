@@ -159,9 +159,10 @@ Google: Routes so traffic enters from Internet at edge closest to source
 
 - Single global IP address can load balance worldwide
   - hit servers closest to them physically
-  - if loaded, it will be routed to next closer one
+  - if that server is overloaded, it will be routed to next closer region
 - Sidesteps many DNS issues
-- can now opt for "normal" network routing to reduce price and functionality
+- Data is as much as possible in the private network
+  - can now opt for "normal" network routing to reduce price and functionality
 
 #### Pricing
 
@@ -182,10 +183,10 @@ Google: Routes so traffic enters from Internet at edge closest to source
 - <https://cloud.google.com/security/security-design/>
 - Separation of duties and physical security
 - Absolutely everything always encrypted at rest
-- Strong key and identity management
+- Encryption at rest can be disabled, then use the strong key and identity management
 - Network encryption
   - All control info within GCP services are encrypted
-  - All WAN traffic to be enccrypted automatically
+  - All WAN traffic within regions to be enccrypted automatically
   - Moving towards encrypting all local traffic within data centers
 - BeyondCorp
   - Security Model
@@ -194,7 +195,7 @@ Google: Routes so traffic enters from Internet at edge closest to source
 
 #### Scale and Automation
 
-**Automate all the things**
+**Automate all the things to respond appropriately**
 
 - Scalability must be unbounded
 - Devs don't want to be answer pages
