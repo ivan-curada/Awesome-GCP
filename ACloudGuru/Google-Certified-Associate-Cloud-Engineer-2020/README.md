@@ -3,6 +3,7 @@
 Instructor: Mattias Andersson
 
 <https://learn.acloud.guru/course/gcp-101/>
+
 <https://learn.acloud.guru/course/gcp-certified-associate-cloud-engineer/>
 
 `See one. Do one. Teach one.`
@@ -14,13 +15,14 @@ Similar to AWS Solutions Architecture but more of AWS SysOps Adminstrator.
 Troubleshoot systems. Know how data flows in the system.
 
 Associate Cloud Engineer
+
 - running systems
 - command line  access
 
-Professional Cloud Architech
+Professional Cloud Architect
+
 - business analysis and tradeoffs
 
-Both
 - understand how things work in deep level
 - do something hands on
 
