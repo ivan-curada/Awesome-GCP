@@ -32,7 +32,7 @@ Commercialized some things in GCP
 - BigTable
 - Spanner
 - GCS (built on Collosus)
- - BigQuery (from Dremel)
+- BigQuery (from Dremel)
 
 Focus on innovation.
 Differentiates from AWS (focused on automating heavy lifting)
@@ -172,8 +172,6 @@ Google: Routes so traffic enters from Internet at edge closest to source
 
 #### Security
 
-**Distrust the network**
-
 - <https://cloud.google.com/security/security-design/>
 - Separation of duties and physical security
 - Absolutely everything always encrypted at rest
@@ -182,21 +180,19 @@ Google: Routes so traffic enters from Internet at edge closest to source
   - All control info within GCP services are encrypted
   - All WAN traffic within regions to be enccrypted automatically
   - Moving towards encrypting all local traffic within data centers
-- BeyondCorp
+- BeyondCorp - **Distrust the network**
   - Security Model
   - access control from network perimeter to individual devices and user
   - Best security practice: Defense in depth, layers of security
 
 #### Scale and Automation
 
-**Automate all the things to respond appropriately**
-
+- **Automate all the things to respond appropriately**
 - Scalability must be unbounded
 - Devs don't want to be answer pages
 - One of the Principle of Site Reliability Engineering
   - Engineer the reliability in the system
   - Automate the things tto respond appropriately
-
 
 #### Resource Quotas (Soft Limits)
 
@@ -217,6 +213,7 @@ gcloud compute project-info describe --project myprojectid
 #### Organization
 
 Project
+
 - similar to AWS accounts
 - has its own resources
   - resourcecs can be shared with other projects
