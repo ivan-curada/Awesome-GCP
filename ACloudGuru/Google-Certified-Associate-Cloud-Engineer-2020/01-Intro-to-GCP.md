@@ -1,10 +1,4 @@
-# Introduction to Google Cloud Platform
-
-Instructor: Mattias Andersson
-
-<https://learn.acloud.guru/course/gcp-101/>
-
-**Outline**
+# Intro to Google Cloud Platform
 
 1. Overview
     - overall context
