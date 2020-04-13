@@ -67,3 +67,7 @@ https://cloud.google.com/vpc/docs/vpc
 Tutorials
 https://cloud.google.com/run/docs/quickstarts/build-and-deploy
 https://cloud.google.com/container-registry/docs/managing#deleting_images
+
+https://cloud.google.com/iam/docs/overview#how_cloud_iam_works 
+
+ https://cloud.google.com/iam/docs/overview#allusers
