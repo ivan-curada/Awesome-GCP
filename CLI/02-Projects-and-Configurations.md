@@ -27,6 +27,10 @@ $ gcloud config get-value project
 Change project
 
 $ gcloud config set project [project-ide]
+
+
+Get full URI
+$ gcloud projects list --uri
 ```
 
 ## Configuration

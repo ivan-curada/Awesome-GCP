@@ -71,3 +71,10 @@ https://cloud.google.com/container-registry/docs/managing#deleting_images
 https://cloud.google.com/iam/docs/overview#how_cloud_iam_works 
 
  https://cloud.google.com/iam/docs/overview#allusers
+
+ https://cloud.google.com/bigquery/docs/schema-detect
+
+ https://cloud.google.com/resource-manager/docs/cloud-platform-resource-
+ 
+ https://cloud.google.com/vpc/docs/using-vpc
+ https://cloud.google.com/iam/docs/understanding-custom-roles#testing_and_deploying
