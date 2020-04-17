@@ -30,7 +30,13 @@ $ gcloud config set project [project-ide]
 
 
 Get full URI
+
 $ gcloud projects list --uri
+
+
+Update Project Name
+
+$ gcloud projects update [PROJECT_ID] --name [NEW_NAME]
 ```
 
 ## Configuration
