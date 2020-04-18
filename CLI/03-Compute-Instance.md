@@ -35,4 +35,5 @@ Add tags
 <https://cloud.google.com/sdk/gcloud/reference/compute/instances/add-tags>
 
 $  gcloud compute instances add-tags [INSTANCE_NAME] --tags=[TAG1,TAG2] --zone=[ZONE]
+
 ```
