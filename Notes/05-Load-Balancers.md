@@ -1,6 +1,6 @@
 # Load Balancers
 
-## HTTP Internal Load Balancer
+## Internal HTTP Load Balancer
 
 - regional load balancer
 
@@ -21,7 +21,7 @@ Requirements:
 4. Create an internal load balancer
 5. Test traffic to internal load balancer
 
-### Firewall rule
+### Firewall rules
 
 - allow traffic from reserved subnet (load balancer subnet) to instance subnet
   - tcp: 80
@@ -31,9 +31,9 @@ Requirements:
   - tcp
 - allow SSH to main instance subnet
   - source IP: 0.0.0.0/0
-  - tcp: 
+  - tcp: 22
   
-### Creating Internal Load Balancer
+### Creating Internal HTTP(S) Load Balancer
 
 GCP Navigation Menu > Networking Section > Network Services > Load balancing > Create Load Balancer
 
@@ -44,6 +44,7 @@ GCP Navigation Menu > Networking Section > Network Services > Load balancing > C
 - Click Create
 - Backend Configuration - Create Backend Service
   - Backend type: Instance Groups
+  - Choose Instance Groups
   - Create Health Check (use default)
 - Routing Rules
   - Select Backend Service
@@ -53,3 +54,47 @@ GCP Navigation Menu > Networking Section > Network Services > Load balancing > C
   - Choose instance subnet
   - Internal IP: Static or Ephemera
   - Port: 80
+- Click Create
+- Load Balancer IP is in the Frontend section
+
+## External HTTP Load Balancing
+
+- traffic comes from the internet
+
+### Steps
+
+1. Craete VPC and subnets
+2. Create instance templates
+3. Managed instance groups
+4. Create Load Balancer
+
+### Firewall rules
+
+- allow GCP health checks to check if managed instance group backend can be reachable
+  - source IP: 130.211.0.0/22, 35.191.0.0/16
+    - probe IP addresses for Internal HTTP Load Balancer
+  - tcp: 80
+
+### Creating External HTTP(S) Load Balancer
+
+GCP Navigation Menu > Networking Section > Network Services > Load balancing > Create Load Balancer
+
+- Select **HTTP(S) Load Balancing**
+- Internal, choose **From Internet to My VMs**
+- Details for Name, Region, Network
+- Create Reserved Subnet
+- Click Create
+- Backend Configuration - Create Backend Service
+  - Backend type: Instance Groups
+  - Choose Instance Groups
+  - Create Health Check (use default)
+- Routing Rules
+  - Select Backend Service
+  - Mode: Simple host and path rule
+- Frontend Configuration
+  - Protocol: HTTP
+  - Choose instance subnet
+  - Internal IP: Static or Ephemera
+  - Port: 80
+- Click Create
+- Load Balancer IP is in the Frontend section
