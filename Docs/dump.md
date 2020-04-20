@@ -80,3 +80,5 @@ https://cloud.google.com/iam/docs/overview#how_cloud_iam_works
  https://cloud.google.com/iam/docs/understanding-custom-roles#testing_and_deploying
 
  https://cloud.google.com/load-balancing/docs/health-check-concepts#probes
+
+ https://cloud.google.com/dns/docs/dnssec?hl=en_US&_ga=2.254679816.-129804501.1586835056
