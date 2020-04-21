@@ -1,4 +1,4 @@
-# Creating VPCs in GCP using the Console
+# Creating VPCs in GCP
 
 Navigation Menu > Networking section > VPC network > VPC networks
 
@@ -24,3 +24,25 @@ The default network (which is automatically created for every project) already h
     - IP Address Range
 5. Click `Add Subnet`
 6. Click `Create`
+
+## Using CLI
+
+<https://cloud.google.com/sdk/gcloud/reference/compute/networks>
+
+### Create VPC network
+
+``` cli
+gcloud compute networks create [VPC_NAME] --subnet-mode [custom/auto] --description [DESCRIPTION]
+```
+
+### Create Subnet
+
+```cli
+gcloud compute networks subnets create [SUBNET_NAME] --network [VPC_NAME] --range [CIDR] --region [REGION]
+```
+
+### Create Firewall
+
+``` cli
+gcloud compute firewall-rules create [FIREWALL_NAME] --network [VPC_NAME] --allow tcp:22,icmp
+```
