@@ -1,0 +1,1 @@
+docker build . -t asia.gcr.io/[projectid]/hello-node:1.0
