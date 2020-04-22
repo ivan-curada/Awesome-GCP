@@ -16,7 +16,7 @@ Create Compute Engine Resource
 
 <https://cloud.google.com/sdk/gcloud/reference/compute/instances/create>
 
-$ gcloud compute instances create [INSTANCE_NAME] --network=[VPC-name] --subnet=[SUBNET-name] --zone=[ZONE]
+$ gcloud compute instances create [INSTANCE_NAME] --network=[VPC-name] --subnet=[SUBNET-name] --zone=[ZONE] --machine-type [MACHINE_TYPE]
 
 
 Show properties
