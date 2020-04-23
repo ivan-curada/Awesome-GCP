@@ -21,6 +21,8 @@ gcloud compute networks peerings create [PEER_NAME] --network [VPC_NAME_1] --pee
 
 ## Getting Network and Subnet ID
 
+``` cli
 gcloud compute networks describe [NETWORK_NAME] | grep id
 
 gcloud compute networks subnets describe [SUBNET_NAME] --region [REGION] | grep id 
+```
