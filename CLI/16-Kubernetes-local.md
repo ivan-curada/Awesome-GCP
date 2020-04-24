@@ -2,6 +2,8 @@
 
 <https://kubernetes.io/docs/tasks/tools/install-minikube/>
 
+<https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply>
+
 ## Steps
 
 1. Start Minikube
