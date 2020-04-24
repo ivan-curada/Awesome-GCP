@@ -29,7 +29,7 @@
 
 ## Accounts, Limits, Pricing
 
-## AWS
+### AWS
 
 - sign up for an AWS Account
 - can emualte a standard organizational billing structure
@@ -38,7 +38,8 @@
 - has soft limits for new accounts
 - Amazon Pricing Calculator
 
-## GCP
+### GCP
+
 - requires a Google account
 - service usage is grouped by `Project` rather by account
   - can create muliple, wholly separaate projects under the same account
@@ -76,4 +77,3 @@
 ## Service Comparisons
 
 <https://cloud.google.com/docs/compare/aws#service_comparisons>
-
