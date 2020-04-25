@@ -84,11 +84,15 @@
 
 ### Shared VPC
 
+<https://cloud.google.com/vpc/docs/shared-vpc>
+
 - A VPC network from one project (`host project`) can be share to other projects in the Google Cloud organization
 - access can be granted to the entire Shared VPC networks or select subnets therein using specific IAM permissions
   - allow to provide centralized control over a common network while maintaining organizational flexibility
 
 ### VPC Network Peering
+
+<https://cloud.google.com/vpc/docs/vpc-peering>
 
 - allows you to build (SaaS) ecosystems in Google Cloud
   - making services available privately acreoss different VPC networks
@@ -98,6 +102,19 @@
 - Peered networks share subnet routes
   - Optionally, both networks can be configures to share custom static and dynamic routes
 - Network and Security Administration, Project Owners, Editors, Compute Instance Admins from one network do not automatically get roles for the other network
+
+### RFC 1918
+
+<https://tools.ietf.org/html/rfc1918>
+
+- Private Address Space
+- The Internet Assigned Numbers Authority (IANA) has reserved the following three blocks of the IP address space for private internets
+
+| Start IP | End IP | Prefix | Available Address |
+| -- | -- | -- | -- |
+| 10.0.0.0 | 10.255.255.255 | 10/8 | |
+| 172.16.0.0 | 172.31.255.255 | 172.16/12 | |
+| 192.168.0.0 | 192.168.255.255 | 192.168/16 | |
 
 ## Hybrid Cloud
 
@@ -111,3 +128,19 @@
 
 ## Cloud Load Balancing
 
+<https://cloud.google.com/load-balancing/docs>
+
+- `Global External` load balancing
+  - HTTP(S) Load Balancing
+  - SSL Proxy Load Balancing
+  - TCP Proxy Load Balancing
+- `Regional External` Network Load Balancing
+- `Regional Internal` Load Balancing
+
+## Special Configurations
+
+### Private Google Access
+
+<https://cloud.google.com/vpc/docs/private-access-options>
+
+- instances in a subnet of a VPC network can communicate with `Google APIs and services` by using private IP addresses instead of external IP addresses
