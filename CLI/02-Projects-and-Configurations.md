@@ -49,18 +49,9 @@ $ gcloud projects update [PROJECT_ID] --name [NEW_NAME]
 
 gcloud config GROUP | COMMAND [GCLOUD_WIDE_FLAG …]
 
+Show current configuration properties (account and project)
 
-Show current configuration
-
-$ gcloud config configuration list
-
-> NAME          IS_ACTIVE  ACCOUNT  PROJECT                 DEFAULT_ZONE  DEFAULT_REGION
-[configuration] True                practice-258411
-
-
-Show current configuration properties
-
-$ gcloud config list
+$ gcloud config list 
 
 > [core]
 account = myemail@gmail.com
@@ -68,6 +59,14 @@ disable_usage_reporting = True
 project = project_id
 
 Your active configuration is: [default]
+
+
+Show current configuration
+
+$ gcloud config configuration list
+
+> NAME          IS_ACTIVE  ACCOUNT  PROJECT                 DEFAULT_ZONE  DEFAULT_REGION
+[configuration] True                practice-258411
 
 
 Create a new configuration

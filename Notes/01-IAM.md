@@ -34,7 +34,7 @@ Identity of a user is an email address associated with:
 - binds one or more members to a role
 - we give access to users by attaching a policy to a resource giving permission to a user
 - defines *who* (**member**) has what type of access (**role**) on a resource
-    - grants **roles** to an authenticaed user
+  - grants **roles** to an authenticaed user
 - attached only to a resource not a user (**except service accounts with are both identities and resources**)
 
 ## Permissions
