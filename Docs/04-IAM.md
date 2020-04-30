@@ -18,9 +18,7 @@
   - defines and enforces what roles are granted to which memvers
   - attached to a resource
 
-## Access Management Model
-
-### Member
+## Member
 
 - The identity of a member is an email address associated with:
   - Google Account (end users)
@@ -54,19 +52,67 @@
 
 - special identifier that represents anyone who is on the internet, including authenticated and unauthenticated users
 
-### Role
+## Role
 
 - collection of permissions
 - permissions determie what operations are allowed on a resource
 - when a role is granted to a member, all permissions that role contains will be granted.
 - `roles/appengine.appAdmin`
-- 3 kinds of roles
-  - **Primitive Roles**
 
-### Policy
+### Kinds of Roles 
+
+- **Primitive Roles**
+  - historically available
+  - Owner, Editor, Viewer
+  - Avoid using
+- **Predefined Roles**
+  - finer-grained access control than Primitive Roles
+  - `roles/service.roleName`
+- **Custom Roles**
+  - created roles to tailor permissions to the needs of the organization
+
+## Policy
 
 - `Cloud IAM Policy` binds one or more members to a role
 - defines who (`member`) has what type of access (`role`) on a resource and attach to the resource
+- collection of statements that define who has what type of access
+- attached to a resource
+- used to enfore access control whenever that resource is created
+- represented by the Cloud IAM `Policy` object
+  - consists of a list of `Bindings`
+    - binds a list of `members` to a `role`
+  - `role`
+    - `roles/service.roleName`
+  - `members`
+    - list of one or more identities 
+    - `user`
+    - `serviceAccount`
+    - `domain`
+
+### Cloud IAM Policy Stucture
+
+``` json
+{
+  "bindings": [
+    {
+      "role": "roles/storage.objectAdmin",
+       "members": [
+         "user:ali@example.com",
+         "serviceAccount:my-other-app@appspot.gserviceaccount.com",
+         "group:admins@example.com",
+         "domain:google.com"
+       ]
+    },
+    {
+      "role": "roles/storage.objectViewer",
+      "members": [
+        "user:maria@example.com"
+      ]
+    }
+  ]
+}
+
+```
 
 ## Concepts
 
@@ -81,3 +127,15 @@
 - determines what operations are allowed on a resource
 - `service.resource.verb`
 - often correspond one-to-one with REST API methods
+
+### Resource Hierarchy
+
+- Organization - root node
+- Folders - children of Organization
+- Project - children of Organization or  of a Folder
+- Resources for each service - descendants of projects
+
+- Resources inherit the policies of their parent resources
+- effective policy for a resource is the union of the policy set on the resource and policies inherited from higher up in the hierarchy
+- Policy inheritance is transitive
+  - organization-level policies also apply at the resource level

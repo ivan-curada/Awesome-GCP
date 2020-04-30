@@ -1,5 +1,13 @@
 # CLI commands for GCP Projects and Configurations
 
+## Accounts
+
+List active account name
+
+```cli
+gcloud auth list
+```
+
 ## Projects
 
 - <https://cloud.google.com/sdk/gcloud/reference/projects>
@@ -77,6 +85,12 @@ $ gcloud config configurations create [configuration_name]
 Switch between different configurations
 
 $ gcloud config configurations activate [CONFIGURATION_NAME]
+
+
+List project ID
+
+$ gcloud config list project
+
 ```
 
 ## Accounts

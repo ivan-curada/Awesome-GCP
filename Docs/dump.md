@@ -82,3 +82,12 @@ https://cloud.google.com/iam/docs/overview#how_cloud_iam_works
  https://cloud.google.com/load-balancing/docs/health-check-concepts#probes
 
  https://cloud.google.com/dns/docs/dnssec?hl=en_US&_ga=2.254679816.-129804501.1586835056
+
+ https://cloud.google.com/debugger/docs/
+ https://cloud.google.com/trace/docs/quickstart
+ https://cloud.google.com/error-reporting/docs/quickstart
+ https://cloud.google.com/profiler/docs/quickstart
+
+ https://cloudonair.withgoogle.com/events/onboard-core-infrastructure?utm_source=google&utm_medium=website&utm_campaign=FY20-Q1-global-trainingandenablement-operational-other-training_discount&utm_content=core-infrastructure
+
+ 

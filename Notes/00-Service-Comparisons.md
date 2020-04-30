@@ -6,7 +6,8 @@
 | -- | -- | -- | -- | -- |
 | Compute | IaaS | Compute Engine | Amazon EC2 | Virtual Machine in the Cloud|
 | | PaaS | App Engine | AWS Elastic Beanstalk | |
-| | FaaS | Cloud Functions | AWS Lambda | IoT, WebHook, Microservices, Simple CRUD operations |
+| | FaaS | Cloud Functions | AWS Lambda | Serverless application back ends, WebHook integrations, Serverless mobile back ends, Serverless IoT back ends, Real-time data processing systems, Real-time File Processing, Real-time Stream Processing, Intelligent applications
+  (Virtual Assitants and Conversational Experiences, Video and Image analysis, Sentiment Analysis) |
 | Containers | CaaS | Google Kubernetes Engine | Amazon Elastic Kubernetes Service, Amazon Elastic Container Service | Container Orchestration, Microservices |
 | | Containers without Infrastucture | Cloud Run | AWS Fargate | Serverless Containers, Serverless, WebApp Backend, REST API |
 | | Container Registry | Container Registry | Amazon Elastic Container Registry | |
