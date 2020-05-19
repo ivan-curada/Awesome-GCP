@@ -2,13 +2,50 @@
 
 ## NoSQL
 
+- semi-structured
+- flexible schema
+- no joins
+
 ## BigTable
 
 - Wide Column Database
+- Petabyte scale
+- low latency and high availability
+  - low latency writes in high volume
+  - IoT streams
+- designed for analytics
+  - large volume
+- expensive service
+- managed but not serverless
+  - needs to create an instance
+- Instance Types
+  - Development
+    - low cost
+    - does not provide high performance and high availability
+  - Production
+- Storage Types
+  - HDD
+    - only if no need for high IOPS
+  - SDD
+- Clusters
+  - can specify more than one cluster in one instance
+  - Location (Region and Zone)
+  - Nodes
+    - stores metadata about its data
+    - includes where data is stored in Collosus (Google's Storage System)
+    - recommended : 3 as minimum
+  - Replicated Cluster
+    - replica in different region
+- Monitoring
+  - CPU Utilization
+    - if high, add more nodes
+  
 
 ## Datastore
 
 - Document database
+- JSON structre
+- heirarchical
 - Modes
   - determines which storage system is used
   - Native Mode
@@ -45,10 +82,17 @@
 
 ## Relational Database
 
+- structured data
+- requires SQL
+- ACID transactions
+- complex queires
+-joins
+
 ## SQL
 
 - Regional Relational storage
 - managed MySQL and PostgreSQL service
+- upto 10TB
 - setup
   - name
   - root password
@@ -82,11 +126,6 @@
 - metrics
   - CPU utilization - average across all nodes
 
-## BigQuery
-
-- Datawarehouse and
-- large scale data analysis
-
 ## FileStore
 
 - managed Network File System
@@ -94,11 +133,17 @@
 ## Persistent Disk
 
 - Block Storage
+- used with VMs
+- persist data even when VM shuts down
 
 ## Cloud Storage
 
 - Object Storage
 - large unstructured data
+- archived adata
+- temporary storage between service
+- Global Access
+- Web accessible
 - Buckets, folders, projects
   - names 
     - should be globally unique
@@ -122,3 +167,4 @@
   - change storage class
     - object condition
   - coldline objects cant be changed to nearline
+- gsutil command line tool
