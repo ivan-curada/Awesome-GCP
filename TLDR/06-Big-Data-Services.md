@@ -39,6 +39,7 @@
 - manages Hadoop clusters
 - ETL jobs
 - large batch processing
+- lift and shift migration from on prem to cloud
 
 ### Create Clusters
 
