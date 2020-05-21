@@ -93,6 +93,7 @@
 - managed service
 - serverless
 - "stream of time series data and create summary statistics for each minute of data"
+- ETL workload
 
 ## Cloud Storage Transfer
 
