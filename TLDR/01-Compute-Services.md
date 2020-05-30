@@ -185,6 +185,10 @@ gcloud compute images create image-name \
     - set of pods executing a particular conainter
   -need to know IP address of pod fpr API
 - Services
+  - Three types of services:
+    - ClusterIP - exposes the service or group of pod/deployments on an internal IP
+    - NodePort - exposes the service/pod/deployment to the node
+    - LoadBalancer - exposes the service/pod/deployment externally with external IP
   - mechanism for service discovery
   - IP address for load balance service
   - determines what pods available
