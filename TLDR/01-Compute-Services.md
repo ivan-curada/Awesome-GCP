@@ -153,7 +153,7 @@ gcloud compute images create image-name \
   - time autoscale uses to calculate MIGS recommended target size
 - avoids thrashing (rapidly adding and removing instances)
 
-### Unamanged Instance Groups
+### Umanaged Instance Groups
 
 - multiple possibly heterogenous VMs
 - used to applu load balancing across heterogenous groups
@@ -310,6 +310,13 @@ gcloud app browse
 - executes an App Engine managed isntance
 - scale based on load when running dynamic instances
 - can configure resident isntances to run at all times but whe nautoscaling is enabled, use dynamic instances
+- Types of Scaling:
+  - Manual
+    - use resident instances continuously irrespective of load level
+  - Basic 
+    - scales by number of requests
+  - Automatic 
+    - scales based on request rate, response latencies, and application metrics
 - app.yaml configuration
   - target-cpu-ultiization
   - target-throughput-utilization
